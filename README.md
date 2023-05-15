@@ -8,8 +8,7 @@ Esse foi um projeto realizado como uma prosposta feita para a melhora do Codigos
 
 ### 📀pagina home:
 
-A pagina esta completamente responsiva o unico problema foi que não conseguimos colocar os videos no git hub.
-Porem esta completamente responsiva e funcional.
+A pagina esta completamente responsiva e funcional, acho que foi a melhor pagina feita.
 
 ### 📈Pagina Dashbord:
 
