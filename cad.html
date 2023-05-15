@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cad.css" type="text/css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Little Petshop - Cadastre seu Pet</title>
+</head>
+
+<body onload="fazerid();">
+    <!-- header com começo do miolo do site -->
+    <header>
+        <div id="topo">
+            <div id="subCont">
+                <h1>Little Petshop</h1>
+                <nav>
+                    <span class="material-symbols-outlined e">
+                        <a href="index.html" class="der">home</a>
+                    </span>
+                    <span class="material-symbols-outlined e" id="adm" onclick="login();">
+                        <a href="#" class="der">account_circle</a>
+                    </span>
+                    <span class="material-symbols-outlined e" id="a" onclick="logOUT();">
+                        logout
+                    </span>
+                    <span class="material-symbols-outlined e" onclick="hanburguer();">
+                        <a href="#" class="der" id="men">menu</a>
+                    </span>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- fim do header -->
+    <!-- MENU HAMBURGER -->
+    <div id="cont">
+        <ul>
+            <li>
+                <a href="sobre.html" class="ow">informação<span class="material-symbols-outlined">
+                        info
+                    </span></a>
+            </li>
+
+            <li><a href="dash.html" class="ow">
+                    dashbord
+                    <span class="material-symbols-outlined">
+                        query_stats
+                    </span>
+                </a>
+            </li>
+            <li><a href="produtos.html" class="ow">
+                    produtos
+                    <span class="material-symbols-outlined">
+                        shopping_basket
+                    </span>
+                </a>
+            </li>
+            <li><a href="contato.html" class="ow">
+                    contato
+                    <span class="material-symbols-outlined">
+                        call
+                    </span>
+                </a>
+            </li>
+            <li><a href="agnd.html" class="ow">
+                    agende
+                    <span class="material-symbols-outlined">
+                        calendar_month
+                    </span>
+                </a>
+            </li>
+            <li><a href="cad.html" class="ow"> cadastre seu pet
+
+                    <span class="material-symbols-outlined">
+                        Pets
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- FIM DO MENU HAMBURGUER -->
+    <!-- modal do login -->
+    <div id="sumir">
+        <div id="fundomodal">
+            <div id="login">
+                <div id="cabecario">
+                    <h3>LOGIN</h3>
+                    <div id="x" onclick="desaparecer();">
+                        <p class="io">x</p>
+                    </div>
+                </div>
+                <div class="co">
+                    <label for="unaname">
+                        <span class="material-symbols-outlined">
+                            person
+                        </span>
+                    </label>
+                    <input type="text" name="username" placeholder="Username" required id="name">
+                </div>
+
+                <div class="co">
+                    <label for="password">
+                        <span class="material-symbols-outlined">
+                            key
+                        </span>
+                    </label>
+                    <input type="password" name="password" placeholder="Password" required id="pas">
+                </div>
+
+                <div class="co">
+                    <input type="checkbox" checked="checkbox" name="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <button type="submit" id="btnLog" onclick="verificar();">login</button>
+                <h2>não tem conta?</h2>
+                <button type="submit" id="btnCad" onclick="apaCad();">cadastre-se</button>
+            </div>
+        </div>
+    </div>
+    <!-- fim do modal login -->
+    <!-- começo do modal cadastre-se -->
+
+    <div id="desp">
+        <div id="modalCad">
+            <div id="erro">
+                <p>erro</p>
+            </div>
+            <div id="cadastre">
+                <div id="cabecario1">
+                    <h3 class="tu">cadastrar</h3>
+                    <div id="x" onclick="desaparecerCad();">
+                        <p class="io">x</p>
+                    </div>
+                </div>
+                <div id="s0">
+                    <div id="s1">
+                        <div class="cad">
+                            <label for="username">
+                                <span class="material-symbols-outlined a3">
+                                    person
+                                </span>
+                            </label>
+                            <input id="nome" class="in" type="text" name="username" placeholder="Username" required>
+                        </div>
+
+                        <div class="cad">
+                            <label for="password">
+                                <span class="material-symbols-outlined a3">
+                                    key
+                                </span>
+                            </label>
+                            <input id="senha" class="in" type="password" name="password" placeholder="Password"
+                                required>
+                        </div>
+
+                        <div class="cad">
+                            <label for="id">
+                                <span class="material-symbols-outlined a3">
+                                    fingerprint
+                                </span>
+                            </label>
+                            <input id="id" class="in" type="number" name="id" placeholder="ID" required>
+                        </div>
+
+                    </div>
+                    <div id="s2">
+                        <div class="cad">
+                            <label for="adress">
+                                <span class="material-symbols-outlined a3">
+                                    local_post_office
+                                </span>
+                            </label>
+                            <input id="endereco" class="in" type="text" name="adress" placeholder="Endereço" required>
+                        </div>
+
+                        <div class="cad">
+                            <label for="city">
+                                <span class="material-symbols-outlined a3">
+                                    location_city
+                                </span>
+                            </label>
+                            <input id="cidade" class="in" type="text" name="city" placeholder="Cidade" required>
+                        </div>
+
+                        <div class="cad">
+                            <label for="flag">
+                                <span class="material-symbols-outlined a3">
+                                    flag
+                                </span>
+                            </label>
+                            <input id="estado" class="in" type="text" name="flag" placeholder="Sigla Estado" required>
+                        </div>
+
+                    </div>
+                    <div id="s3">
+                        <div class="cad">
+                            <label for="mail">
+                                <span class="material-symbols-outlined a3">
+                                    mail
+                                </span>
+                            </label>
+                            <input id="email" class="in" type="text" name="mail" placeholder="exemplo@gmail.com"
+                                required>
+                        </div>
+
+                        <div class="cad">
+                            <label for="calendar">
+                                <span class="material-symbols-outlined a3">
+                                    calendar_month
+                                </span>
+                            </label>
+                            <input id="data" class="in" type="date" name="calendar" placeholder="dd/mm/aaaa" required>
+                        </div>
+
+                        <div class="cad">
+                            <label for="call">
+                                <span class="material-symbols-outlined a3">
+                                    call
+                                </span>
+                            </label>
+                            <input id="numero" class="in" type="tel" name="call" placeholder="(99) 9999-9999" required>
+                        </div>
+                    </div>
+
+                </div>
+                <button type="submit" id="btnCas" onclick="cadastro();">cadastrar</button>
+            </div>
+        </div>
+    </div>
+    <!-- fim do modal cadastre-se -->
+    <!-- miolo do site -->
+    <div id="container">
+        <div id="questionario">
+            <div id="form">
+                <h5>cadastre seu pet</h5>
+                <div id="box">
+
+                    <div id="nomee">
+                        <div id="label1">
+                            <span class="material-symbols-outlined pi">
+                                sound_detection_dog_barking
+                            </span>
+                            <label for="pet-name" class="ri">Nome do Pet:</label>
+                        </div>
+                        <input type="text" id="pet-name" name="pet-name" required>
+
+                    </div>
+                    <div id="tipo">
+                        <div id="label2">
+                            <span class="material-symbols-outlined pi">
+                                pets
+                            </span>
+                            <label for="pet-type" class="ri">Tipo:</label>
+                        </div>
+                        <select id="pet-type" onchange="mudar();" name="pet-type" required>
+                            <option class="pato" value="">Selecione</option>
+                            <option value="Cachorro">Cachorro</option>
+                            <option value="Gato">Gato</option>
+                            <option value="Aves">Aves</option>
+                            <option value="Outros">Outros</option>
+                        </select>
+                        <input type="text" id="outros" name="outros" style="display: none;">
+                        <span class="error" id="pet-type-error"></span>
+                    </div>
+                    <div id="idade">
+                        <div id="label3">
+                            <span class="material-symbols-outlined pi">
+                                timer
+                            </span>
+                            <label for="pet-age" class="ri">Idade:</label>
+                        </div>
+                        <input type="date" id="pet-age" name="pet-age" required>
+
+                    </div>
+                </div>
+
+                <div id="err">
+                    <span class="error" id="pet-name-error"></span>
+                </div>
+                <div id="btnU"><button type="submit" id="btnEnv" onclick="seuPet();">Enviar</button></div>
+            </div>
+        </div>
+        <!-- fim do miolo do site -->
+        <main>
+            <div id="op">
+                <h4 id="petN">asdasdas</h4>
+                <p class="raca">asdasda</p>
+                <p class="idade">
+                <div id="anos">
+                    <label for="anos" class="ka">Anos:</label>
+                    <span class="anos qo">asd</span>
+                </div>
+                <div id="meses">
+                    <label for="meses" class="ka">Meses:</label>
+                    <span class="meses qo">dasda</span>
+                </div>
+                <div id="ias">
+                    <label for="dias" class="ka">Dias:</label>
+                    <span class="dias qo">dadad</span>
+                </div>
+                </p>
+            </div>
+        </main>
+    </div>
+    <!-- começo do footer -->
+    <footer>
+        Desenvolvido por <p>Little Petshop Team</p>
+    </footer>
+    <!-- fim do footer -->
+</body>
+<script src="js/script.js" type="text/javascript"></script>
+
+</html>

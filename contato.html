@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/cntt.css" type="text/css">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <title>Little Petshop - Contato</title>
+</head>
+
+<body>
+    <!-- header com começo do miolo do site -->
+    <header>
+        <div id="topo">
+            <div id="subCont">
+                <h1>Little Petshop</h1>
+                <nav>
+                    <span class="material-symbols-outlined e">
+                        <a href="index.html" class="der">home</a>
+                    </span>
+                    <span class="material-symbols-outlined e" id="adm" onclick="login();">
+                        <a href="#" class="der">account_circle</a>
+                    </span>
+                    <span class="material-symbols-outlined e" id="a" onclick="logOUT();">
+                        logout
+                    </span>
+                    <span class="material-symbols-outlined e" onclick="hanburguer();">
+                        <a href="#" class="der" id="men">menu</a>
+                    </span>
+                </nav>
+            </div>
+        </div>
+    </header>
+    <!-- fim do header -->
+    <!-- MENU HAMBURGER -->
+    <div id="cont">
+        <ul>
+            <li>
+                <a href="sobre.html" class="ow">informação<span class="material-symbols-outlined">
+                        info
+                    </span></a>
+            </li>
+
+            <li><a href="dash.html" class="ow">
+                    dashbord
+                    <span class="material-symbols-outlined">
+                        query_stats
+                    </span>
+                </a>
+            </li>
+            <li><a href="produtos.html" class="ow">
+                    produtos
+                    <span class="material-symbols-outlined">
+                        shopping_basket
+                    </span>
+                </a>
+            </li>
+            <li><a href="contato.html" class="ow">
+                    contato
+                    <span class="material-symbols-outlined">
+                        call
+                    </span>
+                </a>
+            </li>
+            <li><a href="agnd.html" class="ow">
+                    agende
+                    <span class="material-symbols-outlined">
+                        calendar_month
+                    </span>
+                </a>
+            </li>
+            <li><a href="cad.html" class="ow"> cadastre seu pet
+
+                    <span class="material-symbols-outlined">
+                        Pets
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!-- FIM DO MENU HAMBURGUER -->
+    <!-- modal do login -->
+    <div id="sumir">
+        <div id="fundomodal">
+            <div id="login">
+                <div id="cabecario">
+                    <h3>LOGIN</h3>
+                    <div id="x" onclick="desaparecer();">
+                        <p class="io">x</p>
+                    </div>
+                </div>
+                <div class="co">
+                    <label for="unaname">
+                        <span class="material-symbols-outlined">
+                            person
+                        </span>
+                    </label>
+                    <input type="text" name="username" placeholder="Username" required id="name">
+                </div>
+
+                <div class="co">
+                    <label for="password">
+                        <span class="material-symbols-outlined">
+                            key
+                        </span>
+                    </label>
+                    <input type="password" name="password" placeholder="Password" required id="pas">
+                </div>
+
+                <div class="co">
+                    <input type="checkbox" checked="checkbox" name="remember">
+                    <label for="remember">Remember me</label>
+                </div>
+                <button type="submit" id="btnLog" onclick="verificar();">login</button>
+                <h2>não tem conta?</h2>
+                <button type="submit" id="btnCad" onclick="apaCad();">cadastre-se</button>
+            </div>
+        </div>
+    </div>
+    <!-- fim do modal login -->
+    <!-- começo do modal cadastre-se -->
+
+    <div id="desp">
+        <div id="modalCad">
+            <div id="erro">
+                <p>erro</p>
+            </div>
+            <div id="cadastre">
+                <div id="cabecario1">
+                    <h3 class="tu">cadastrar</h3>
+                    <div id="x" onclick="desaparecerCad();">
+                        <p class="io">x</p>
+                    </div>
+                </div>
+                <div id="s0">
+                    <div id="s1">
+                        <div class="cad">
+                            <label for="username">
+                                <span class="material-symbols-outlined a3">
+                                    person
+                                </span>
+                            </label>
+                            <input id="nome" class="in" type="text" name="username" placeholder="Username" required>
+                        </div>
+
+                        <div class="cad">
+                            <label for="password">
+                                <span class="material-symbols-outlined a3">
+                                    key
+                                </span>
+                            </label>
+                            <input id="senha" class="in" type="password" name="password" placeholder="Password"
+                                required>
+                        </div>
+
+                        <div class="cad">
+                            <label for="id">
+                                <span class="material-symbols-outlined a3">
+                                    fingerprint
+                                </span>
+                            </label>
+                            <input id="id" class="in" type="number" name="id" placeholder="ID" required>
+                        </div>
+
+                    </div>
+                    <div id="s2">
+                        <div class="cad">
+                            <label for="adress">
+                                <span class="material-symbols-outlined a3">
+                                    local_post_office
+                                </span>
+                            </label>
+                            <input id="endereco" class="in" type="text" name="adress" placeholder="Endereço" required>
+                        </div>
+
+                        <div class="cad">
+                            <label for="city">
+                                <span class="material-symbols-outlined a3">
+                                    location_city
+                                </span>
+                            </label>
+                            <input id="cidade" class="in" type="text" name="city" placeholder="Cidade" required>
+                        </div>
+
+                        <div class="cad">
+                            <label for="flag">
+                                <span class="material-symbols-outlined a3">
+                                    flag
+                                </span>
+                            </label>
+                            <input id="estado" class="in" type="text" name="flag" placeholder="Sigla Estado" required>
+                        </div>
+
+                    </div>
+                    <div id="s3">
+                        <div class="cad">
+                            <label for="mail">
+                                <span class="material-symbols-outlined a3">
+                                    mail
+                                </span>
+                            </label>
+                            <input id="email" class="in" type="text" name="mail" placeholder="exemplo@gmail.com"
+                                required>
+                        </div>
+
+                        <div class="cad">
+                            <label for="calendar">
+                                <span class="material-symbols-outlined a3">
+                                    calendar_month
+                                </span>
+                            </label>
+                            <input id="data" class="in" type="date" name="calendar" placeholder="dd/mm/aaaa" required>
+                        </div>
+
+                        <div class="cad">
+                            <label for="call">
+                                <span class="material-symbols-outlined a3">
+                                    call
+                                </span>
+                            </label>
+                            <input id="numero" class="in" type="tel" name="call" placeholder="(99) 9999-9999" required>
+                        </div>
+                    </div>
+
+                </div>
+                <button type="submit" id="btnCas" onclick="cadastro();">cadastrar</button>
+            </div>
+        </div>
+    </div>
+    <!-- fim do modal cadastre-se -->
+    <!-- conteudo da pg. sobre -->
+    <div id="conteudo">
+        <br>
+        <h2>Entre em contato conosco</h2>
+        <p>Abaixo listamos as formas de contato disponíveis em nossa loja.</p>
+        <p>Estamos ansiosos em lhe atender da melhor maneira possível.</p>
+        <br>
+        <h2>Central de Atendimento ao Cliente</h2>
+        <p>+55 14 99123-4742</p>
+        <br>
+        <h2>Horário de Atendimento</h2>
+        <P>Atendimento de Segunda a Sexta das 9:00 as 12:00 e das 14:00 as 18:00.</P>
+        <br>
+        <h2>E-mail</h2>
+        <p>Entre em contato conosco através do e-mail PetshoP@gmail.com</p>
+        <br>
+        <hr id="linha">
+        <br>
+        <h2>Nosso Endereço</h2>
+        <p>Rua Mauro Moota de Andrade 429</p>
+        <p>Brotas-SP</p>
+        <p>CEP: 78346-0200</p>
+        <br>
+        <h2>Dados da Empresa</h2>
+        <p>CNPJ: 22.345.765/0005-00</p>
+        <br>
+        <hr id="linha">
+        <br>
+        <h2 id="per"><span>Permaneça</span> conectado</h2>
+        <table class="tabela">
+            <tr>
+                <td><img id="logo" src='img/twitter.png' /></td>
+                <td class="midias">@petshop</td>
+            </tr>
+            <tr>
+                <td><img id="logo" src='img/facebook.png' /></td>
+                <td class="midias">@pet_shopp</td>
+            </tr>
+            <tr>
+                <td><img id="logo" src='img/download.jpg' /></td>
+                <td class="midias">@PETshop</td>
+            </tr>
+            <tr>
+                <td><img id="logo" src='img/download.png' /></td>
+                <td class="midias">@PeT_shopp</td>
+            </tr>
+            <tr>
+                <td><img id="logo" src='img/download (1).png' /></td>
+                <td class="midias">+55 14 99123-4742</td>
+            </tr>
+        </table>
+        <br>
+        <!-- fim do modal cadastre-se -->
+
+        <footer>
+            Desenvolvido por <p>Little Petshop Team</p>
+        </footer>
+
+        <!-- fim do footer -->
+
+</body>
+<script src="js/cntt.js" type="text/javascript"></script>
+<script src="js/script.js" type="text/javascript"></script>
+
+</html>
