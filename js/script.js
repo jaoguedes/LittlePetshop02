@@ -190,6 +190,12 @@ function verificar() {
     mod.style.display = "none";
     logout.style.display = "block";
   }
+  
+  let erroDoLogin = document.querySelector(".erroDoLogin");
+  else {
+    erroDoLogin.display = 'block';
+    erroDoLogin.inerrHtml = 'essa senha não funciona';
+  }
 }
 function fazerid() {
   let id = document.getElementById("id");
