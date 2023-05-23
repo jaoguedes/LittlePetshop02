@@ -193,8 +193,8 @@ function verificar() {
   
   let erroDoLogin = document.querySelector(".erroDoLogin");
   else {
-    erroDoLogin.display = 'block';
-    erroDoLogin.inerrHtml = 'essa senha não funciona';
+    erroDoLogin.style.display = "block";
+    erroDoLogin.innerHTML = 'essa senha não funciona';
   }
 }
 function fazerid() {
