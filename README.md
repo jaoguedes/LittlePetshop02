@@ -39,7 +39,7 @@ Pagina Responsiva e dentro dos parametros do site.
 Elas em si não formaram uma pagina e sim uma janela modal, completamente responsiva e muito bem feita com todas as validaçoes necessarias, em algumas pagians ela ta meio bugada no quesito de não aparecer automaticamente o ID, foi uma prova de que nosso grupo trabalha muito bem em grupo, todos ajudaram e opinaram sobre, alem de terem conseguido colocar o codigo em todas as paginas.
 
 ### PROJETO DO FIGMA
-
+https://jaoguedes.github.io/LittlePetshop02/
 wire frame:https://www.figma.com/file/oGlK6c0tEdC1C4zzuhrzvO/wire-frame?type=design&node-id=0%3A1&t=wpsJXz2AvV58cQaI-1
 
 desing final:https://www.figma.com/file/c70y1qI8JQlutYsYO8HNuD/design-completo?type=design&node-id=0%3A1&t=t0U9yCp8zRUF1X9M-1
