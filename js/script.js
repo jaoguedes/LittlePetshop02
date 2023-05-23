@@ -184,14 +184,13 @@ function verificar() {
   let mod = document.getElementById("sumir");
   let logout = document.getElementById("a");
   logado = name == "admin@teste.com.br" && pass == "!@#ABC123def";
-
+  let erroDoLogin = document.querySelector(".erroDoLogin");
+  
   if (logado) {
     adm.innerHTML = '<img id="vacaAd" src="img/vaca-680x438-1.jpg" alt="">';
     mod.style.display = "none";
     logout.style.display = "block";
   }
-  
-  let erroDoLogin = document.querySelector(".erroDoLogin");
   else {
     erroDoLogin.style.display = "block";
     erroDoLogin.innerHTML = 'essa senha não funciona';
